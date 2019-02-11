@@ -17,11 +17,16 @@ contract Lottery{
         return uint256(keccak256(block.difficulty, now, player));
     }
     
-    function pickWinner() public {
-        require(msg.sender == manager)
+    function pickWinner() public restricted {
         uint256 index = random() % player.length;
         player[index].transfer(this.balance);
         player = new address[](0);
     }
+    
+    modifier restricted (){
+        require(msg.sender == manager);
+        _;
+    }
+
 }
 
