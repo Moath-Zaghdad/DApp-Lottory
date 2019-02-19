@@ -15,4 +15,4 @@ output example:
 ```Contract deployed to  0xc456595fA971E8CdD1CC4c24acbB44755A1cFE58```
 
 #### Architecture
-[Ethereum Architecture](./Ethereum-Architecture.png)
+![Ethereum Architecture](./Ethereum-Architecture.png)
